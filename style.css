@@ -1,0 +1,160 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/******************************************************************/
+body {
+  background-color: #a4c5e2;
+}
+
+html {
+  /*scroll bar*/
+
+  scrollbar-color: rgb(70, 45, 154) rgb(233, 210, 152);
+  scrollbar-width: thick;
+}
+
+main {
+  padding-top: 6.3rem;
+}
+
+/*object-fit:cover*/
+/***********************HELE KASSEN*****************************/
+
+#master-container {
+  display: flex;
+}
+
+p {
+  background-color: rgb(164, 197, 226);
+  color: rgb(22, 59, 92);
+  padding-left: 22rem;
+  font-size: 2rem;
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes site-progress {
+  from {
+    scale: 0 1; /*animation som får stregen i toppen af siden til at være animeret*/
+  }
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0; /*sætter noget ind i en kasse*/
+  block-size: 10px;
+  background-color: rgb(162, 74, 74);
+
+  animation: site-progress linear; /*vi vil ikke have animationen til at styres af tid længere, men i stedet af css-funktionen "scroll"*/
+  transform-origin: 0; /*gør at stregen kører ind fra siden*/
+  animation-timeline: scroll(); /*css-funktion scroll som får animationen til at kører mens man scroller*/
+  z-index: 10;
+}
+
+/**********LEVEL 1**********/
+.button1 {
+  border: none;
+  box-shadow: none;
+  background-color: rgb(164, 197, 226);
+  color: rgb(22, 59, 92);
+  padding-left: 22rem;
+  font-size: 2rem;
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button1:hover {
+  color: #ffff;
+}
+
+#billede {
+  width: 1920px;
+}
+
+/**********LEVEL 2**********/
+.button2 {
+  width: 60px;
+}
+
+.text-2 {
+  display: inline-block;
+}
+
+#billede2 {
+  width: 1920px;
+}
+/***********LEVEL 3***********/
+
+.button3 {
+  background-color: rgb(164, 197, 226);
+  width: 60px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 40px;
+}
+
+.button3:hover {
+  background-color: rgb(255, 128, 0);
+}
+
+#billede3 {
+  width: 1920px;
+}
+
+.text-3 {
+  display: inline-block;
+  padding-left: 10rem;
+}
+/*******LEVEL 4**********/
+#billede4 {
+  width: 1920px;
+}
+
+a:hover {
+  color: rgb(29, 161, 29);
+  cursor: pointer;
+}
+/*******LEVEL 5***********/
+#billede5 {
+  width: 1920px;
+}
+
+.level5:hover {
+  background-color: red;
+  color: red;
+  cursor: pointer;
+  border: black;
+  box-shadow: 8px 20px 3px rgba(0, 0, 0, 0.44);
+  border-radius: 20px;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+/******LEVEL 6**********/
+#billede6 {
+  width: 1920px;
+}
+.text-6 {
+  display: inline-block;
+}
+.level6 {
+  width: 30px;
+  opacity: 0;
+}
+.level6:hover {
+  width: 30px;
+  opacity: 1;
+}
